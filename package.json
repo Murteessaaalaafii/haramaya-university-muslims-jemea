@@ -1,0 +1,13 @@
+{
+  "name": "haramayaa-jamea-registration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Haramayaa University Muslims Jame'a Registration website (frontend + backend)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

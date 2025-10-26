@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HARAMAYAA UNIVERSITY MUSLIMS JAME'A | Registration</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Haramayaa University Muslims Jame'a registration portal: register, store, and list members." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Haramayaa University Muslims Jame'a</h1>
+      <p class="subtitle">Registration Portal</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>New Registration</h2>
+      <form id="reg-form" novalidate>
+        <div class="grid">
+          <label>
+            <span>Full Name<span class="req">*</span></span>
+            <input type="text" name="fullName" required />
+          </label>
+          <label>
+            <span>Student ID<span class="req">*</span></span>
+            <input type="text" name="studentId" required />
+          </label>
+          <label>
+            <span>Department<span class="req">*</span></span>
+            <input type="text" name="department" required />
+          </label>
+          <label>
+            <span>Year (e.g., 1, 2, 3, 4)<span class="req">*</span></span>
+            <input type="text" name="year" required />
+          </label>
+          <label>
+            <span>Gender<span class="req">*</span></span>
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="name@example.com" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="+251..." />
+          </label>
+          <label>
+            <span>Membership Type</span>
+            <select name="membershipType">
+              <option>Member</option>
+              <option>Volunteer</option>
+              <option>Committee</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Register</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+        <div id="form-errors" class="errors" role="alert" aria-live="polite"></div>
+        <div id="form-success" class="success" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <div class="actions" style="justify-content:flex-end;">
+      <button id="show-list" class="btn">Show List</button>
+    </div>
+
+    <section id="list-section" class="card hidden">
+      <div class="list-header">
+        <h2>Registered Members</h2>
+        <div class="list-actions">
+          <input id="search" type="search" placeholder="Search name, ID, department..." aria-label="Search registrants" />
+          <button id="refresh" class="btn">Refresh</button>
+          <button id="toggle-list" class="btn">Hide</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Department</th>
+              <th>Year</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Type</th>
+              <th>Registered</th>
+            </tr>
+          </thead>
+          <tbody id="list-body">
+            <tr><td colspan="9" style="text-align:center;">No records yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"> HU Muslims Jame'a</div>
+  </footer>
+
+  <script src="scrpt1.js"></script>
+</body>
+</html>
